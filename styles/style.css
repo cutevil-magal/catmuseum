@@ -1,0 +1,193 @@
+body {
+  font-family: 'IBM Plex mono', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 70px; /* Отступ для фиксированного меню */
+}
+
+.content {
+  padding: 80px 50px;
+  background-color: #FFF5E6;
+}
+
+/* Заголовки и подзаголовки */
+.content__section {
+  margin-bottom: 100px;
+}
+
+.content__title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  width: 100%;
+
+}
+.content__subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #666;
+  width: 100%;
+}
+
+
+/* (3 карточки в строке) */
+.section__classes,
+.section__practical-information,
+.section__our-stars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.content__title,
+.content__subtitle,
+.content__button {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* Карточки */
+.content__article {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+.content__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.content__article h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.content__article p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* анимация при наведении */
+.content__article:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(222, 78, 0, 0.2);
+}
+
+.content__article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 89, 0, 0.062), transparent);
+  transition: left 0.6s ease;
+}
+
+.content__article:hover::before {
+  left: 100%;
+}
+
+/* Кнопки */
+.content__button {
+  display: block;
+  margin: 50px auto 0;
+  padding: 15px 40px;
+  background: #FF5900;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  min-width: 300px; 
+}
+
+.content__button:hover {
+  background: #E54E00;
+}
+
+.header__image {
+  display: none;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+  .content {
+    padding: 60px 30px;
+  }
+  
+  .section__our-stars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section__classes,
+  .section__practical-information {
+    grid-template-columns: repeat(2, 1fr);
+  }  
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) { 
+  .header__image {
+    display: block;
+    height: 30vh;
+    background-image: url('../images/cat.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 50px auto;
+  }
+  
+  .content {
+    padding: 40px 20px;
+  }
+  
+  .content__title {
+    font-size: 2rem;
+  }
+  
+  .section__our-stars,
+  .section__classes,
+  .section__practical-information {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .content__article {
+    padding: 20px;
+  }
+  
+  button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 480px) {  
+  .header__logo-image {
+    height: 30px;
+  }
+  
+  .content__title {
+    font-size: 1.8rem;
+  }
+  
+  .content__article h3 {
+    font-size: 1.2rem;
+  }
+}

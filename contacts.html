@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+  
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/contacts.css">
+
+  <script src="./scripts/components.js"></script>
+  <script src="./scripts/validation.js"></script>
+</head>
+<body class="page"> 
+  <main class="content">
+    <section class="content__section section__contacts">
+      <h2 class="content__title">Контактная информация</h2>
+      <p class="content__subtitle">
+        Основные правила поведения в Музее кота для комфортного пребывания посетителей и безопасности наших питомцев
+      </p>
+      <article class="content__article text-left ">
+        <h3 class="content__subtitle text-center">Адрес</h3>
+        <p class="content__text">
+          Республика Беларусь, г.Минск, ул.Интернациональная, д.23<br>Станция метро: Октябрьская (2 минуты пешком)
+        </p>
+      </article>
+      <article class="content__article text-left ">
+        <h3 class="content__subtitle text-center">Время работы</h3>
+        <p class="content__text">
+          Вторник - воскресенье: 11:00 - 20:00 <br>
+          Понедельник: санитарный день <br>
+          Последний вход: за 1 час до закрытия <br>
+        </p>
+      </article>
+      <article class="content__article text-left ">
+        <h3 class="content__subtitle text-center">Телефоны</h3>
+        <p class="content__text">
+          Для справок: (+375 29) 642-31-83<br>
+          Для записи на экскурсии: (+375 29) 123-45-67<br>
+          Электронная почта: catmuseumby@gmail.com
+        </p>
+      </article>
+      <article class="content__article text-left ">
+        <h3 class="content__subtitle text-center">Стоимость посещения</h3>
+        <p class="content__text">
+          Взрослый билет: 20 руб.<br>
+          Детский билет (3-12 лет): 15 руб.<br>
+          Студенты/пенсионеры: 17 руб.<br>
+          Дети до 3 лет: бесплатно<br>
+          Семейный билет (2+2): 55 руб.
+        </p>
+      </article>
+    </section>
+    <section class="content__section">
+      <h2 class="content__title">Где мы находимся?</h2>
+      <p class="content__subtitle">
+        Музей находится в самом центре Минска, в 2 минутах ходьбы от станции метро "Октябрьская". <br>Рядом остановки общественного транспорта: автобусы 24, 38, 57, 91; трамваи 3, 5, 7.
+      </p>
+      <article class="content__article text-left ">
+        <div style="position:relative;overflow:hidden;">
+          <a href="https://yandex.by/maps/org/muzey_kota/1034023234/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Музей Кота</a>
+          <a href="https://yandex.by/maps/157/minsk/category/museum/184105894/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Музей в Минске</a>
+          <a href="https://yandex.by/maps/157/minsk/category/landmark_attraction/89683368508/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Достопримечательность в Минске</a>
+          <iframe src="https://yandex.by/map-widget/v1/?display-text=%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%20%D0%BA%D0%BE%D1%82%D0%B0&ll=27.588105%2C53.915447&mode=search&oid=1034023234&ol=biz&sctx=ZAAAAAgBEAAaKAoSCXmu78NBjjtAES%2F6CtKM80pAEhIJWHIVi98U2j8RiPNwAtNpwT8iBgABAgMEBSgKOABAnQFIAWoCdWGdAc3MzD2gAQCoAQC9AQBBylHCAQXC4oftA4ICE9C80YPQt9C10Lkg0LrQvtGC0LCKAgCSAgCaAgxkZXNrdG9wLW1hcHM%3D&sll=27.588105%2C53.915447&sspn=0.101881%2C0.034000&text=%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%20%D0%BA%D0%BE%D1%82%D0%B0&z=14"
+            width="100%" height="400px" frameborder="1" allowfullscreen="true" style="position:relative;">
+          </iframe>
+        </div>
+      </article>
+    </section>
+    <section class="content__section feedback-section">
+      <h2 class="feedback-title">Форма обратной связи</h2>
+      <p class="feedback-subtitle">Мы всегда рады вашим вопросам, предложениям и отзывам!</p>
+
+      <form id="feedbackForm" class="feedback-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Имя *</label>
+          <input type="text" id="name" name="name" class="form-input" required>
+          <span class="form-hint">(Как к вам обращаться?)</span>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Электронная почта *</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+          <span class="form-hint">(Для ответа на ваше обращение)</span>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Телефон</label>
+          <input type="tel" id="phone" name="phone" class="form-input">
+          <span class="form-hint">(Необязательно, но поможет быстрее связаться)</span>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="topic" class="form-label">Тема сообщения *</label>
+          <select id="topic" name="topic" class="form-select" required>
+            <option value="">-- Выберите тему --</option>
+            <option value="visit">Вопрос о посещении</option>
+            <option value="excursion">Запись на экскурсию</option>
+            <option value="volunteer">Волонтерская помощь</option>
+            <option value="cooperation">Сотрудничество</option>
+            <option value="suggestion">Предложение/жалоба</option>
+            <option value="other">Другое</option>
+          </select>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Сообщение *</label>
+          <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+          <span class="form-hint">(Опишите подробно ваш вопрос или предложение)</span>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="agreement" name="agreement" required>
+            <span class="checkmark"></span>
+            Я согласен на обработку персональных данных *
+          </label>
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <span class="checkmark"></span>
+            Подписаться на рассылку новостей музея
+          </label>
+        </div>
+
+        <button type="submit" class="submit-button">Отправить сообщение</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

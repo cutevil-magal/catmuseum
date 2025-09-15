@@ -1,0 +1,39 @@
+.section__our-cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+
+/* Каждый второй article занимает 2 колонки */
+.content__article:nth-child(2n) {
+  grid-column: span 2;
+}
+    
+/* Адаптивность */
+@media (max-width: 900px) {
+  .section__our-cats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+      
+  .content__article:nth-child(n) {
+    grid-column: span 2;
+  }
+      
+  /* На мобильных каждый второй article занимает 2 колонки */
+  .content__article:nth-child(2n) {
+    grid-column: span 2;
+  }
+}
+    
+@media (max-width: 600px) {
+  .section__our-cats {
+    grid-template-columns: 1fr;
+  }
+      
+  .content__article:nth-child(n),
+  .content__article:nth-child(2n) {
+    grid-column: span 1;
+  }
+}

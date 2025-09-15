@@ -1,0 +1,28 @@
+.section__help {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Адаптация для планшетов (1024px) */
+@media (max-width: 1024px) {
+  .section__help {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Адаптация для мобильных (768px) */
+@media (max-width: 768px) {
+  .section__help {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Дополнительно: для очень маленьких экранов (480px) */
+@media (max-width: 480px) {
+  .section__help {
+    gap: 15px;
+  }
+}
